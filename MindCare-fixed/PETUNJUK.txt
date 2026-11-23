@@ -1,0 +1,26 @@
+MINDCARE - CARA MENJALANKAN
+
+1. Ekstrak folder MindCare-fixed.
+2. Buka folder tersebut di VS Code.
+3. Buka Terminal > New Terminal.
+4. Jalankan: npm install
+5. Salin file .env.example menjadi file baru bernama .env.
+6. Buka .env dan isi OPENAI_API_KEY dengan API key milikmu.
+   Jangan kirim atau bagikan file .env kepada siapa pun.
+7. Jalankan: npm start
+8. Buka browser: http://localhost:3000
+
+PENTING:
+- Jangan jalankan melalui Live Server (port 5500).
+- Terminal harus tetap terbuka saat website digunakan.
+- API OpenAI memerlukan akun API dan dapat dikenakan biaya.
+- Login saat ini masih demo, bukan autentikasi sungguhan.
+- Riwayat chat tersimpan di Local Storage browser. Jangan masukkan cerita
+  yang sangat pribadi atau informasi sensitif.
+- MindCare AI adalah asisten informasi/dukungan, bukan psikolog atau
+  pengganti bantuan profesional.
+
+Jika chat gagal:
+- Baca pesan error di gelembung chat.
+- Periksa terminal VS Code untuk detail error.
+- Tes http://localhost:3000/api/health

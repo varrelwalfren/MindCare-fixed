@@ -1,0 +1,15 @@
+{
+  "name": "mindcare-konseling-sebaya",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website MindCare dengan chatbot AI melalui backend Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "openai": "^5.20.0"
+  }
+}

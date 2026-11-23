@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindCare - Konseling Sebaya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="login-screen" id="loginScreen">
+    <div class="login-box">
+        <div class="logo">Mind<span>Care.</span></div>
+        <h2>Selamat Datang!</h2>
+        <p>Tempat aman untuk berbagi cerita dan menemukan dukungan.</p>
+
+        <form id="loginForm">
+            <label>Nama Pengguna</label>
+            <input type="text" id="username" placeholder="Masukkan nama kamu" required>
+
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Masukkan email" required>
+
+            <button type="submit" class="primary-btn">Masuk ke MindCare</button>
+        </form>
+
+        <small>MindCare - Ruang Cerita, Ruang Peduli.</small>
+    </div>
+</div>
+
+<!-- APLIKASI UTAMA -->
+<div class="app-container" id="appContainer" style="display:none;">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">Mind<span>Care.</span></div>
+
+        <div class="profile-mini">
+            <div class="avatar">M</div>
+            <div>
+                <strong id="sidebarName">Pengguna</strong>
+                <small>Anggota MindCare</small>
+            </div>
+        </div>
+
+        <nav>
+            <p class="nav-title">MENU UTAMA</p>
+
+            <a href="#" class="nav-link active" data-page="home">
+                <span>⌂</span> Beranda
+            </a>
+
+            <a href="#" class="nav-link" data-page="counselor">
+                <span>♙</span> Konselor
+            </a>
+
+            <a href="#" class="nav-link" data-page="chat">
+                <span>✉</span> Mulai Konseling
+            </a>
+
+            <a href="#" class="nav-link" data-page="history">
+                <span>◷</span> Riwayat Konseling
+            </a>
+
+            <a href="#" class="nav-link" data-page="profile">
+                <span>⚙</span> Profil Saya
+            </a>
+        </nav>
+
+        <button class="logout-btn" id="logoutBtn">↪ Keluar</button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2 id="pageTitle">Beranda</h2>
+                <p id="pageDescription">Selamat datang di layanan Konseling Sebaya.</p>
+            </div>
+            <div class="top-user" id="topUser">Pengguna</div>
+        </header>
+
+        <!-- BERANDA -->
+        <section class="page active" id="home">
+
+            <div class="welcome-card">
+                <div>
+                    <h1>Halo, <span id="welcomeName">Teman</span>!</h1>
+                    <p>Setiap cerita memiliki arti. Jangan ragu untuk berbagi.</p>
+                    <button class="primary-btn" onclick="showPage('chat')">
+                        Mulai Konseling →
+                    </button>
+                </div>
+                <div class="welcome-icon">💬</div>
+            </div>
+
+            <h3 class="section-heading">Layanan MindCare</h3>
+
+            <div class="dashboard-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Konseling AI</h3>
+                    <p>Tempat berbagi cerita dan mendapatkan respons dari asisten AI.</p>
+                    <button onclick="showPage('chat')">Mulai Sekarang →</button>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🧑‍🤝‍🧑</div>
+                    <h3>Konselor Sebaya</h3>
+                    <p>Kenali layanan dan informasi pendamping konseling sebaya.</p>
+                    <button onclick="showPage('counselor')">Lihat Informasi →</button>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Riwayat Cerita</h3>
+                    <p>Lihat kembali sesi percakapan yang pernah dilakukan.</p>
+                    <button onclick="showPage('history')">Lihat Riwayat →</button>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>💙 Ingat, Kamu Tidak Sendirian</h3>
+                <p>
+                    Tidak apa-apa jika sedang merasa bingung, sedih, atau membutuhkan
+                    seseorang untuk mendengarkan. Kamu berhak mendapatkan dukungan.
+                </p>
+            </div>
+        </section>
+
+        <!-- KONSELOR -->
+        <section class="page" id="counselor">
+            <div class="section-card">
+                <h2>Layanan Konselor Sebaya</h2>
+                <p>
+                    Konseling sebaya merupakan layanan dukungan yang memberikan
+                    kesempatan kepada seseorang untuk berbagi cerita, bertukar
+                    pengalaman, dan mendapatkan dukungan dari sesama.
+                </p>
+
+                <div class="counselor-item">
+                    <div class="feature-icon">🤝</div>
+                    <div>
+                        <h3>Pendamping Sebaya</h3>
+                        <p>Tempat berbagi dan mendapatkan dukungan dari sesama.</p>
+                    </div>
+                </div>
+
+                <div class="counselor-item">
+                    <div class="feature-icon">🤖</div>
+                    <div>
+                        <h3>Asisten MindCare AI</h3>
+                        <p>Asisten percakapan berbasis kecerdasan buatan untuk
+                        membantu mendengarkan dan memberikan informasi umum.</p>
+                    </div>
+                </div>
+
+                <button class="primary-btn" onclick="showPage('chat')">
+                    Mulai Percakapan
+                </button>
+            </div>
+        </section>
+
+        <!-- CHAT AI -->
+        <section class="page" id="chat">
+            <div class="chat-container">
+
+                <div class="chat-header">
+                    <div class="bot-avatar">🤖</div>
+                    <div>
+                        <h3>MindCare AI</h3>
+                        <small>Asisten percakapan • Siap mendengarkan</small>
+                    </div>
+                    <span class="online-dot"></span>
+                </div>
+
+                <div class="chat-notice">
+                    MindCare AI adalah asisten pendukung, bukan psikolog atau
+                    tenaga profesional. Hindari mengirimkan informasi pribadi
+                    yang sensitif.
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            Halo! Selamat datang di MindCare. 💙
+                            <br><br>
+                            Aku siap mendengarkan ceritamu. Bagaimana kabarmu hari ini?
+                        </div>
+                    </div>
+                </div>
+
+                <div class="typing" id="typingIndicator" style="display:none;">
+                    MindCare AI sedang mengetik...
+                </div>
+
+                <form class="chat-input-area" id="chatForm">
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Tuliskan ceritamu di sini..."
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" id="sendBtn">➤</button>
+                </form>
+
+                <p class="chat-footer">
+                    Percakapan AI dapat keliru. Untuk masalah yang berat,
+                    mintalah bantuan orang dewasa tepercaya atau tenaga profesional.
+                </p>
+            </div>
+        </section>
+
+        <!-- RIWAYAT -->
+        <section class="page" id="history">
+            <div class="section-card">
+                <h2>Riwayat Konseling</h2>
+                <p>Daftar percakapan yang tersimpan pada browser ini.</p>
+                <div id="historyList"></div>
+                <button class="secondary-btn" id="clearHistory">
+                    Hapus Riwayat
+                </button>
+            </div>
+        </section>
+
+        <!-- PROFIL -->
+        <section class="page" id="profile">
+            <div class="section-card">
+                <h2>Profil Saya</h2>
+
+                <div class="profile-avatar">👤</div>
+
+                <label>Nama Pengguna</label>
+                <input type="text" id="profileName" readonly>
+
+                <label>Email</label>
+                <input type="email" id="profileEmail" readonly>
+
+                <p class="profile-note">
+                    Selamat menggunakan layanan MindCare.
+                </p>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
